@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="20dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/dark"
+            android:text="Anzahl der Ringe"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            >
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleRingCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:checkedButton="@id/btn_select_4_rings"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_select_4_rings"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/dark"
+                    android:layout_height="wrap_content"
+                    android:text="4 Ringe"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_select_5_rings"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/dark"
+                    android:layout_height="wrap_content"
+                    android:text="5 Ringe"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_select_6_rings"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/dark"
+                    android:layout_height="wrap_content"
+                    android:text="6 Ringe"
+                    />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/colors_spinner_container_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/dark"
+                android:text="1. Farbe"
+                android:layout_marginBottom="5dp"
+                android:textSize="14sp" />
+            <Spinner
+                android:id="@+id/colors_spinner_color_1"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/colors_spinner_container_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/dark"
+                android:text="2. Farbe"
+                android:layout_marginBottom="5dp"
+                android:textSize="14sp" />
+            <Spinner
+                android:id="@+id/colors_spinner_color_2"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/colors_spinner_container_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/dark"
+                android:text="3. Farbe"
+                android:layout_marginBottom="5dp"
+                android:textSize="14sp" />
+            <Spinner
+                android:id="@+id/colors_spinner_color_3"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/colors_spinner_container_mult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/dark"
+                android:text="Multiplikator"
+                android:layout_marginBottom="5dp"
+                android:textSize="14sp" />
+            <Spinner
+                android:id="@+id/colors_spinner_mult"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/colors_spinner_container_tol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/dark"
+                android:text="Toleranz"
+                android:layout_marginBottom="5dp"
+                android:textSize="14sp" />
+            <Spinner
+                android:id="@+id/colors_spinner_tol"
+                android:background="@drawable/spinner_background"
+                android:layout_width="match_parent"
+                android:spinnerMode="dialog"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/colors_spinner_container_temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/dark"
+                android:text="Temperaturkoeffizient"
+                android:layout_marginBottom="5dp"
+                android:textSize="14sp" />
+            <Spinner
+                android:id="@+id/colors_spinner_temp"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingVertical="15dp"
+            android:background="@color/lighter_grey"
+            android:text="Berechnen"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+</ScrollView>
